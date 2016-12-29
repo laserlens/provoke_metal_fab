@@ -1,0 +1,1 @@
+angular.module('ProvokeApp', ['ngRoute']);
