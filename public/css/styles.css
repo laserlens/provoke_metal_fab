@@ -37,3 +37,19 @@
 	transition: 0.4s all linear;
 	height: 100%;
 }
+
+/*carousel styles*/
+.swiper-container {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
