@@ -40,16 +40,21 @@
 
 /*carousel styles*/
 .swiper-container {
-    width: 400px;
+    width: 600px;
     height: 400px;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -150px;
+    margin-left: -325px;
     margin-top: -150px;
 }
 
 .swiper-slide {
     background-position: center;
     background-size: cover;
+}
+
+/*about styles*/
+.about {
+  margin-top: 3em;
 }
