@@ -2,11 +2,14 @@
 <!-- Swiper -->
  <div class="swiper-container">
      <div class="swiper-wrapper">
-         <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/1)"></div>
-         <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/2)"></div>
-         <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/3)"></div>
-         <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/4)"></div>
-         <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/5)"></div>
+         <div class="swiper-slide text-center" style="background-image:url(assests/images/metal.jpg)">
+           <h1>Provoke Metal Fab</h1>
+           <h2>Buffalo, MN</h1>
+         </div>
+         <div class="swiper-slide" style="background-image:url(assests/images/welding.jpg)"></div>
+         <div class="swiper-slide" style="background-image:url(assests/images/sawing.jpg)"></div>
+         <div class="swiper-slide" style="background-image:url(assests/images/bending.jpg)"></div>
+         <div class="swiper-slide" style="background-image:url(assests/images/CNCplasma.jpg)"></div>
      </div>
      <!-- Add Pagination -->
      <div class="swiper-pagination"></div>
@@ -17,19 +20,14 @@
  <script>
  var swiper = new Swiper('.swiper-container', {
      pagination: '.swiper-pagination',
-     effect: 'cube',
      grabCursor: true,
      loop: true,
      nextButton: '.swiper-button-next',
      prevButton: '.swiper-button-prev',
-     autoplay: 5000,
-     autoplayDisableOnInteraction: true,
+     autoplay: 4000,
+     autoplayDisableOnInteraction: false,
      paginationClickable: true,
-     cube: {
-         shadow: true,
-         slideShadows: true,
-         shadowOffset: 20,
-         shadowScale: 0.94
-     }
+     spaceBetween: 30,
+     effect: 'fade'
  });
  </script>

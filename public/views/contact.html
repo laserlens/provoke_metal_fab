@@ -1,1 +1,21 @@
-<h1>909 1st Ave NW, Buffalo, MN 55313</h1>
+<div class="container text-center contact">
+  <div class="col-xs-12 text-center map">
+    <div ng-show="((contact.show))">
+      <img src="assests/images/mapview.png" alt="map view" class="img-thumbnail" height="400" width="575">
+    </div>
+    <div ng-hide="((contact.show))">
+      <img src="assests/images/worldview.png" alt="global view" class="img-thumbnail" height="400" width="575">
+    </div>
+    <div class="col-xs-3"></div>
+    <div class="text-center col-xs-6">
+      <button class="btn btn-primary btn-lg btn-block viewButton" ng-click="contact.viewButton()" type="button" name="button">{{contact.buttonName}}</button>
+    </div>
+    <div class="col-xs-3"></div>
+  </div>
+  <div class="text-center col-xs-12">
+    <h2><u>Provoke Metal Fab</u></h2>
+    <h4>909 1st Ave NW, Buffalo, MN 55313</h4>
+    <h4>phone number here</h4>
+    <h4>companyemail@anemail.com</h4>
+  </div>
+</div>

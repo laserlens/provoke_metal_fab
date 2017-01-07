@@ -40,13 +40,9 @@
 
 /*carousel styles*/
 .swiper-container {
-    width: 600px;
-    height: 400px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -325px;
-    margin-top: -150px;
+    width: 100vw;
+    height: 80vh;
+    margin-top: 2em;
 }
 
 .swiper-slide {
@@ -57,4 +53,9 @@
 /*about styles*/
 .about {
   margin-top: 3em;
+}
+
+/*contact styles*/
+.contact {
+	margin-top: 1em;
 }
