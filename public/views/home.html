@@ -1,30 +1,38 @@
 
 <!-- Swiper -->
  <div class="swiper-container">
-     <div class="swiper-wrapper">
-         <div class="swiper-slide text-center" style="background-image:url(assests/images/metal.jpg)">
-           <h1>Provoke Metal Fab</h1>
-           <h2>Buffalo, MN</h1>
+     <div class="swiper-wrapper text-center">
+         <div class="swiper-slide" style="background-image:url(assests/images/metal.jpg)">
+           <h1 class="sliderText">PROVOKE METAL FAB
+             <p>Buffalo, MN</p>
+           </h1>
          </div>
-         <div class="swiper-slide" style="background-image:url(assests/images/welding.jpg)"></div>
-         <div class="swiper-slide" style="background-image:url(assests/images/sawing.jpg)"></div>
-         <div class="swiper-slide" style="background-image:url(assests/images/bending.jpg)"></div>
-         <div class="swiper-slide" style="background-image:url(assests/images/CNCplasma.jpg)"></div>
+         <div class="swiper-slide" style="background-image:url(assests/images/welding.jpg)">
+           <h1 class="sliderText">WELDING</h1>
+         </div>
+         <div class="swiper-slide" style="background-image:url(assests/images/sawing.jpg)">
+           <h1 class="sliderText">SAWING</h1>
+         </div>
+         <div class="swiper-slide" style="background-image:url(assests/images/bending.jpg)">
+           <h1 class="sliderText">FLAT/TUBE BENDING</h1>
+         </div>
+         <div class="swiper-slide" style="background-image:url(assests/images/CNCplasma.jpg)">
+           <h1 class="sliderText">CNC PLASMA CUTTING</h1>
+         </div>
      </div>
-     <!-- Add Pagination -->
      <div class="swiper-pagination"></div>
  </div>
- <div class="swiper-button-prev"></div>
- <div class="swiper-button-next"></div>
+ <!-- <div class="swiper-button-prev"></div>
+ <div class="swiper-button-next"></div> -->
  <!-- Initialize Swiper -->
  <script>
  var swiper = new Swiper('.swiper-container', {
      pagination: '.swiper-pagination',
      grabCursor: true,
      loop: true,
-     nextButton: '.swiper-button-next',
-     prevButton: '.swiper-button-prev',
-     autoplay: 4000,
+    //  nextButton: '.swiper-button-next',
+    //  prevButton: '.swiper-button-prev',
+     autoplay: 4500,
      autoplayDisableOnInteraction: false,
      paginationClickable: true,
      spaceBetween: 30,

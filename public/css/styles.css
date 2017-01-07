@@ -1,3 +1,8 @@
+/*Global Styles*/
+html {
+	font-family: 'Lora', serif;
+}
+
 /* navbar styles */
 .navbar, .navbar-default {
 	border-radius: 0;
@@ -50,6 +55,25 @@
     background-size: cover;
 }
 
+.sliderText {
+	font-family: 'Lora', serif;
+	margin-top: 4em;
+	font-size: 60px;
+	color: white;
+	text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
 /*about styles*/
 .about {
   margin-top: 3em;
@@ -58,4 +82,9 @@
 /*contact styles*/
 .contact {
 	margin-top: 1em;
+}
+
+/*quote styles*/
+.quote {
+	margin-top: 6em;
 }
