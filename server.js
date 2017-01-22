@@ -1,8 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-//const login = require('./routes/login');
-//const register = require('./routes/register');
+const email = require('./routes/email');
 const session = require('express-session');
 
 
@@ -12,8 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-//app.use('/login', login);
-//app.use('/register', register);
+app.use('/email', email);
 
 
 app.get('/', function(req, res){

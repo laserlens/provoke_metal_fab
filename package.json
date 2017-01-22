@@ -18,6 +18,7 @@
     "express": "^4.14.0",
     "express-session": "^1.14.1",
     "ng": "^0.0.0-rc6",
+    "nodemailer": "^2.7.2",
     "pg": "^6.1.0",
     "swiper": "^3.4.1"
   }
