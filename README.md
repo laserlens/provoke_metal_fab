@@ -3,6 +3,7 @@
   1. A mobile friendly website
   2. Provides info of services provided by PMF
   3. Allows users to contact PMF for quotes and questions
+    - quote form will use nodemailer to send email to business about user info
   3. Users can get location and contact info of PMF
 
 ## technologies used
