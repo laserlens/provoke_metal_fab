@@ -11,12 +11,13 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+app.use('/email', email);
 
-app.get('/', function(req, res){
+app.get('/*', function(req, res){
   res.sendFile(path.join(__dirname, 'public/views/index.html'));
 });
 
-app.use('/email', email);
+
 
 var server = app.listen(3000, function() {
   console.log('Listening on port', server.address().port);

@@ -3,8 +3,11 @@ const router = require('express').Router();
 const path = require('path');
 const pg = require('pg');
 
+var pool = new pg.Pool();
+
 // send email with nodemailer
 router.put('/quote', function(req, res) {
+ pool.connect(function(error, client, done) {
   console.log('whats the request.body', req.body);
   var smtpTransport = nodemailer.createTransport('SMTP', {
     service: 'Gmail',
@@ -22,6 +25,7 @@ router.put('/quote', function(req, res) {
   smtpTransport.sendMail(mailOptions, function(err) {
     console.log('Message sent!');
   });
+ });
 });
 
 module.exports = router;

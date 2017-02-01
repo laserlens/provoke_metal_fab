@@ -15,6 +15,7 @@
     "angular-route": "^1.5.8",
     "body-parser": "^1.16.0",
     "bootstrap": "^3.3.7",
+    "dotenv": "^4.0.0",
     "express": "^4.14.0",
     "express-session": "^1.14.1",
     "ng": "^0.0.0-rc6",
