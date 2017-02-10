@@ -9,7 +9,7 @@ function QuoteController(EmailService) {
     quote.formData = {email:'test@gmail.com', text:'akdjb dkdhs dkhie akdklh dkdid'};
     //send formData to email service
     EmailService.sendEmail(quote.formData).then(function() {
-      console.log('emal sent?');
+      console.log('email sent');
       });
   }
 
