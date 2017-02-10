@@ -6,10 +6,13 @@ function EmailService ($http) {
   this.sendEmail = function (formData) {
     var customerEmail = formData.email;
     var customerText = formData.text;
+    var company = formData.company;
+    var phone = formData.phone;
+    var name = formData.name;
     console.log('what is the formData', formData);
       return $http({
         method: 'GET',
-        url: '/email/' + customerEmail + '/' + customerText
+        url: '/email/' + customerEmail + '/' + customerText + '/' + company + '/' + phone + '/' + name
       }).then(function successCallback(response) {
           return console.log('sent email service',response.data);
         }, function errorCallback(response) {

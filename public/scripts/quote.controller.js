@@ -6,7 +6,8 @@ function QuoteController(EmailService) {
 
   //function to run after submit
   quote.submit = function() {
-    quote.formData = {email:'test@gmail.com', text:'akdjb dkdhs dkhie akdklh dkdid'};
+    quote.formData = {company:quote.company, name:quote.name, phone:quote.phone,
+    email:quote.email, text:quote.text};
     //send formData to email service
     EmailService.sendEmail(quote.formData).then(function() {
       console.log('email sent');

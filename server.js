@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer');
-// const email = require('./routes/email');
 const session = require('express-session');
 
 
@@ -19,23 +18,26 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static('public'));
-// app.use('/email',email);
+
 
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'public/views/index.html'));
 });
 
-app.get('/email/:customerEmail/:customerText',function(req,res){
-  
+app.get('/email/:customerEmail/:customerText/:company/:phone/:name',function(req,res){
+
   var email = req.params.customerEmail;
   var text = req.params.customerText;
+  var company = req.params.company;
+  var name = req.params.name;
+  var phone = req.params.phone;
 
 //code to send e-mail.
   var mailOptions={
-   to : 'laserlens@gmail.com',
+   to : 'adrianflak1@gmail.com',
    from: 'laserlens@gmail.com',
-   subject : 'Quote/Questions',
-   text : 'Email: ' + email + '\n' + text
+   subject : 'Quote/Questions for Invoke Metal&Fab',
+   text : 'Company: ' + company + '\n' + 'Name: ' + name + '\n' + 'Phone: ' + phone + '\n' + 'Email: ' + email + '\n' + text
  }
  console.log(mailOptions);
  smtpTransport.sendMail(mailOptions, function(error, response){
