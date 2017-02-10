@@ -1,14 +1,14 @@
-# Provoke Metal Fab website
+# Invoke Metal Fab website
 
   1. A mobile friendly website
-  2. Provides info of services provided by PMF
-  3. Allows users to contact PMF for quotes and questions
+  2. Provides info of services provided
+  3. Allows users to contact the Company for quotes and questions
     - quote form will use nodemailer to send email to business about user info
-  3. Users can get location and contact info of PMF
+  3. Users can get location and contact info of the company
 
 ## technologies used
 
   1. AngularJS
   2. bootstrap
-  3. a map API for loaction info
-  4. maybe a database mongodb or sql
+  3. nodemailer
+  4. swiper carousel
