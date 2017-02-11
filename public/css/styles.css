@@ -3,6 +3,14 @@ html {
 	font-family: 'Lora', serif;
 }
 
+body {
+	background-color: #dddddd;
+}
+
+textarea {
+	white-space: pre-wrap;
+}
+
 /* navbar styles */
 .navbar, .navbar-default {
 	border-radius: 0;

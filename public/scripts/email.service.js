@@ -5,11 +5,12 @@ function EmailService ($http) {
   //quote form info to be sent as email
   this.sendEmail = function (formData) {
     var customerEmail = formData.email;
-    var customerText = formData.text;
+    var customerText = formData.text.replace(/\n/g, '  ');
     var company = formData.company;
     var phone = formData.phone;
     var name = formData.name;
     console.log('what is the formData', formData);
+    console.log('whats the text', customerText);
       return $http({
         method: 'GET',
         url: '/email/' + customerEmail + '/' + customerText + '/' + company + '/' + phone + '/' + name

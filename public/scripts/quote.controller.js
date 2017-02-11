@@ -6,12 +6,21 @@ function QuoteController(EmailService) {
 
   //function to run after submit
   quote.submit = function() {
-    quote.formData = {company:quote.company, name:quote.name, phone:quote.phone,
-    email:quote.email, text:quote.text};
-    //send formData to email service
-    EmailService.sendEmail(quote.formData).then(function() {
-      console.log('email sent');
-      });
+    var name = quote.name;
+    var company = quote.company;
+    var phone = quote.phone;
+    var email = quote.email;
+    var text = quote.text;
+    if (quote.name === undefined || quote.email === undefined || quote.text === undefined) {
+      return;
+    }else {
+      quote.formData = {company:company, name:name, phone:phone,
+      email:email, text:text};
+      //send formData to email service
+      EmailService.sendEmail(quote.formData).then(function() {
+        console.log('email sent');
+        });
+    }
   }
 
 }//end of QuoteController function

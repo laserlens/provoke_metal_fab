@@ -31,13 +31,15 @@ app.get('/email/:customerEmail/:customerText/:company/:phone/:name',function(req
   var company = req.params.company;
   var name = req.params.name;
   var phone = req.params.phone;
+  //console.log('whats the text', text);
 
 //code to send e-mail.
   var mailOptions={
    to : 'adrianflak1@gmail.com',
    from: 'laserlens@gmail.com',
    subject : 'Quote/Questions for Invoke Metal&Fab',
-   text : 'Company: ' + company + '\n' + 'Name: ' + name + '\n' + 'Phone: ' + phone + '\n' + 'Email: ' + email + '\n' + text
+   text : 'Company: ' + company + '\n' + 'Name: ' + name + '\n' +
+   'Phone: ' + phone + '\n' + 'Email: ' + email + '\n\n' + text
  }
  console.log(mailOptions);
  smtpTransport.sendMail(mailOptions, function(error, response){

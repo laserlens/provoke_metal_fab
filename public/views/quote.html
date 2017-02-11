@@ -11,11 +11,11 @@
     <label class="sr-only" for="yourName">Your Name</label>
     <input type="text" class="form-control" id="yourName" ng-model="quote.name" placeholder="Your Name" required>
     <label class="sr-only" for="phoneNumber">Phone Number</label>
-    <input type="text" class="form-control" id="phoneNumber" ng-model="quote.phone" placeholder="Phone Number">
+    <input type="tel" class="form-control" id="phoneNumber" ng-model="quote.phone" placeholder="Phone: 555-555-5555">
     <label class="sr-only" for="emailAddress">Email address</label>
     <input type="email" class="form-control" id="emailAddress" ng-model="quote.email" placeholder="Email" required>
   </div>
-  <div class="form-group col-xs-12">
+  <div class="form-group col-xs-11">
     <button type="submit" ng-click="quote.submit()" class="btn btn-success btn-lg btn-block ">Submit</button>
   </div>
 </form>
