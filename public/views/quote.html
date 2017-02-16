@@ -1,9 +1,9 @@
 <div class="container text-center quote">
-  <h3>Fill Out the Form Below</h3>
+  <h3 class="formTitle">Fill Out the Form Below</h3>
 <div class="col-xs-1"></div>
 <form class="form-horizontal col-xs-10 quoteForm">
   <div class="form-group col-xs-6">
-    <textarea class="form-control" rows="6" ng-model="quote.text" placeholder="Putt Order Info or Questions Here" required></textarea>
+    <textarea class="form-control" rows="6" ng-model="quote.text" placeholder="Put Order Info or Questions Here" required></textarea>
   </div>
   <div class="form-group col-xs-6">
     <label class="sr-only" for="companyName">Company Name</label>
@@ -15,7 +15,7 @@
     <label class="sr-only" for="emailAddress">Email address</label>
     <input type="email" class="form-control" id="emailAddress" ng-model="quote.email" placeholder="Email" required>
   </div>
-  <div class="form-group col-xs-11">
+  <div class="form-group col-xs-10 submitButton">
     <button type="submit" ng-click="quote.submit()" class="btn btn-success btn-lg btn-block ">Submit</button>
   </div>
 </form>

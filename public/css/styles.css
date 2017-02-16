@@ -98,3 +98,9 @@ textarea {
 .quote {
 	margin-top: 6em;
 }
+.submitButton{
+	padding-left: 5em;
+}
+.formTitle{
+	padding-right: 3em;
+}

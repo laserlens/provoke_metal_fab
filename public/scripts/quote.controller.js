@@ -19,6 +19,11 @@ function QuoteController(EmailService) {
       //send formData to email service
       EmailService.sendEmail(quote.formData).then(function() {
         console.log('email sent');
+        quote.name = '';
+        quote.company = '';
+        quote.phone = '';
+        quote.email = '';
+        quote.text = '';
         });
     }
   }

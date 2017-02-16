@@ -3,15 +3,15 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const session = require('express-session');
-
+require('dotenv').config();
 
 const app = express();
 
 var smtpTransport = nodemailer.createTransport("SMTP",{
     service: 'Gmail',
     auth: {
-      user: 'laserlens@gmail.com',
-      pass: '654123'
+      user: process.env.EMAIL_ADDRESS,
+      pass: process.env.EMAIL_PASSWORD
     }
 });
 
@@ -36,12 +36,11 @@ app.get('/email/:customerEmail/:customerText/:company/:phone/:name',function(req
 //code to send e-mail.
   var mailOptions={
    to : 'adrianflak1@gmail.com',
-   from: 'laserlens@gmail.com',
+   from: process.env.EMAIL_ADDRESS,
    subject : 'Quote/Questions for Invoke Metal&Fab',
    text : 'Company: ' + company + '\n' + 'Name: ' + name + '\n' +
    'Phone: ' + phone + '\n' + 'Email: ' + email + '\n\n' + text
  }
- console.log(mailOptions);
  smtpTransport.sendMail(mailOptions, function(error, response){
    if(error){
      console.log(error);
@@ -53,6 +52,8 @@ app.get('/email/:customerEmail/:customerText/:company/:phone/:name',function(req
  });
 });
 
-var server = app.listen(3000, function() {
+var port = process.env.PORT || 3300;
+
+var server = app.listen(function() {
   console.log('Listening on port', server.address().port);
 });
