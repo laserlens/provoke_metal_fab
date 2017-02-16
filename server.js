@@ -52,8 +52,16 @@ app.get('/email/:customerEmail/:customerText/:company/:phone/:name',function(req
  });
 });
 
-var port = process.env.PORT || 3300;
+// var port = process.env.PORT || 3300;
 
-var server = app.listen(function() {
-  console.log('Listening on port', server.address().port);
+// var server = app.listen(function() {
+//   console.log('Listening on port', server.address().port);
+// });
+app.set('port', (process.env.PORT || 5000));
+//For avoidong Heroku $PORT error
+app.get('/', function(request, response) {
+    var result = 'App is running'
+    response.send(result);
+}).listen(app.get('port'), function() {
+    console.log('App is running, server is listening on port ', app.get('port'));
 });
